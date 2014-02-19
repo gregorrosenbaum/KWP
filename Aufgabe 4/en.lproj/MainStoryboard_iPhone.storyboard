@@ -1,23 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fRv-hF-gT6">
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="yLp-SE-Uqy"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqI-IZ-ZbX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="UMd-if-moF"/>
+                                    <constraint firstAttribute="height" constant="32" id="iFI-ad-v41"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GqI-IZ-ZbX" firstAttribute="top" secondItem="3" secondAttribute="top" constant="35" id="Chq-8z-9rv"/>
+                            <constraint firstItem="fRv-hF-gT6" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="H2F-Jg-K8f"/>
+                            <constraint firstItem="fRv-hF-gT6" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="OYi-fA-hbB"/>
+                            <constraint firstItem="fRv-hF-gT6" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="hVV-eN-OhM"/>
+                            <constraint firstItem="fRv-hF-gT6" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="rZQ-MX-B9g"/>
+                            <constraint firstItem="GqI-IZ-ZbX" firstAttribute="centerX" secondItem="fRv-hF-gT6" secondAttribute="centerX" type="default" id="v3U-Sg-W5h"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="distLabel" destination="GqI-IZ-ZbX" id="9KU-cH-cNd"/>
+                        <outlet property="map" destination="fRv-hF-gT6" id="BF6-Ki-weE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="distLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -24,6 +24,10 @@
 		CC4651AC1845F88C00EFB060 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4651841845F88C00EFB060 /* Foundation.framework */; };
 		CC4651B41845F88C00EFB060 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC4651B21845F88C00EFB060 /* InfoPlist.strings */; };
 		CC4651B71845F88C00EFB060 /* Aufgabe_4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4651B61845F88C00EFB060 /* Aufgabe_4Tests.m */; };
+		CC4651C31845FFB400EFB060 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4651C21845FFB400EFB060 /* MapKit.framework */; };
+		CC4651C51845FFFC00EFB060 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4651C41845FFFC00EFB060 /* CoreLocation.framework */; };
+		CC4651CB184614AC00EFB060 /* KaisersWegpunkt.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4651CA184614AC00EFB060 /* KaisersWegpunkt.m */; };
+		CCC7E3F11847527E007576AA /* FriedrichKrause.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CCC7E3F01847527E007576AA /* FriedrichKrause.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,11 @@
 		CC4651B31845F88C00EFB060 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC4651B51845F88C00EFB060 /* Aufgabe_4Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aufgabe_4Tests.h; sourceTree = "<group>"; };
 		CC4651B61845F88C00EFB060 /* Aufgabe_4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aufgabe_4Tests.m; sourceTree = "<group>"; };
+		CC4651C21845FFB400EFB060 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CC4651C41845FFFC00EFB060 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CC4651C9184614AC00EFB060 /* KaisersWegpunkt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KaisersWegpunkt.h; path = ../KaisersWegpunkt.h; sourceTree = "<group>"; };
+		CC4651CA184614AC00EFB060 /* KaisersWegpunkt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KaisersWegpunkt.m; path = ../KaisersWegpunkt.m; sourceTree = "<group>"; };
+		CCC7E3F01847527E007576AA /* FriedrichKrause.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = FriedrichKrause.gpx; path = ../../Downloads/FriedrichKrause.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4651C51845FFFC00EFB060 /* CoreLocation.framework in Frameworks */,
+				CC4651C31845FFB400EFB060 /* MapKit.framework in Frameworks */,
 				CC4651831845F88C00EFB060 /* UIKit.framework in Frameworks */,
 				CC4651851845F88C00EFB060 /* Foundation.framework in Frameworks */,
 				CC4651871845F88C00EFB060 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +100,9 @@
 		CC4651761845F88C00EFB060 = {
 			isa = PBXGroup;
 			children = (
+				CCC7E3F01847527E007576AA /* FriedrichKrause.gpx */,
+				CC4651C41845FFFC00EFB060 /* CoreLocation.framework */,
+				CC4651C21845FFB400EFB060 /* MapKit.framework */,
 				CC4651881845F88C00EFB060 /* Aufgabe 4 */,
 				CC4651AF1845F88C00EFB060 /* Aufgabe 4Tests */,
 				CC4651811845F88C00EFB060 /* Frameworks */,
@@ -119,6 +133,8 @@
 		CC4651881845F88C00EFB060 /* Aufgabe 4 */ = {
 			isa = PBXGroup;
 			children = (
+				CC4651C9184614AC00EFB060 /* KaisersWegpunkt.h */,
+				CC4651CA184614AC00EFB060 /* KaisersWegpunkt.m */,
 				CC4651911845F88C00EFB060 /* AppDelegate.h */,
 				CC4651921845F88C00EFB060 /* AppDelegate.m */,
 				CC46519A1845F88C00EFB060 /* MainStoryboard_iPhone.storyboard */,
@@ -240,6 +256,7 @@
 				CC4651991845F88C00EFB060 /* Default-568h@2x.png in Resources */,
 				CC46519C1845F88C00EFB060 /* MainStoryboard_iPhone.storyboard in Resources */,
 				CC46519F1845F88C00EFB060 /* MainStoryboard_iPad.storyboard in Resources */,
+				CCC7E3F11847527E007576AA /* FriedrichKrause.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +294,7 @@
 				CC46518F1845F88C00EFB060 /* main.m in Sources */,
 				CC4651931845F88C00EFB060 /* AppDelegate.m in Sources */,
 				CC4651A21845F88C00EFB060 /* ViewController.m in Sources */,
+				CC4651CB184614AC00EFB060 /* KaisersWegpunkt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +485,7 @@
 				CC4651BC1845F88C00EFB060 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC4651BD1845F88C00EFB060 /* Build configuration list for PBXNativeTarget "Aufgabe 4Tests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +494,7 @@
 				CC4651BF1845F88C00EFB060 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
